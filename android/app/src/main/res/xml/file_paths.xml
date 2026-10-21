@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  FileProvider 暴露的目录白名单。
+  在线更新把 APK 下载到 getTemporaryDirectory()（Android 上是应用私有 cache 目录），
+  因此这里只需要放开 cache-path；不要图省事写 root-path，那等于把整个私有目录暴露给外部。
+-->
+<paths>
+    <cache-path name="update_cache" path="." />
+</paths>

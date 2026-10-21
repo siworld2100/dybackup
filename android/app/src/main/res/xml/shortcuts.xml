@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 长按桌面图标出现的快捷方式：复制抖音链接后长按图标一步进入解析。 -->
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+    <shortcut
+        android:enabled="true"
+        android:icon="@mipmap/ic_launcher"
+        android:shortcutId="parse_clipboard"
+        android:shortcutLongLabel="@string/shortcut_parse_long"
+        android:shortcutShortLabel="@string/shortcut_parse_short">
+        <intent
+            android:action="com.dybackup.app.PARSE_CLIPBOARD"
+            android:targetClass="com.dybackup.app.MainActivity"
+            android:targetPackage="com.dybackup.app" />
+    </shortcut>
+</shortcuts>

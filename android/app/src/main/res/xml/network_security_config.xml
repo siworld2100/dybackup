@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  明文 HTTP 白名单。
+
+  为什么验证阶段允许明文：
+  版本清单带 HMAC 签名、安装包下载后核对 sha256，两者的完整性都不依赖 TLS；
+  清单里也不含任何用户数据。所以明文只泄露「有人在下载升级包」这一事实。
+
+  正式发布前应做的事：给电脑配好域名 + 证书（家宽 80/443 被封时用 Let's Encrypt 的
+  DNS-01 方式签发），然后把下面的 cleartextTrafficPermitted 改成 false，
+  并删掉 domain-config。届时不改也能用，但通道降级为明文属于可被审计发现的缺陷。
+-->
+<network-security-config>
+    <base-config cleartextTrafficPermitted="true">
+        <trust-anchors>
+            <certificates src="system" />
+        </trust-anchors>
+    </base-config>
+</network-security-config>

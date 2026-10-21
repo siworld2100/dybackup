@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 桌面长按快捷方式 -->
+    <string name="shortcut_parse_short">备份剪贴板链接</string>
+    <string name="shortcut_parse_long">备份剪贴板里的抖音链接</string>
+</resources>
